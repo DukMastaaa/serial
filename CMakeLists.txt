@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 2.8.3)
 project(serial)
 
 #Catkin is not required at all in modern cmake, dependencies are handled fine through target_link_libraries.
-#We set the default to be on to not break anyone's builds.
-option(SERIAL_ENABLE_CATKIN "Enable using the Catkin make extension to cmake (ie for ROS)" ON)
+#I'm changing the default option to off since my team is not using ROS here.
+option(SERIAL_ENABLE_CATKIN "Enable using the Catkin make extension to cmake (ie for ROS)" OFF)
 if(${SERIAL_ENABLE_CATKIN})
     # Find catkin
     find_package(catkin REQUIRED)
